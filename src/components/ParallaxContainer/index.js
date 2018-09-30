@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 
-const ParallaxContainer = ({children}) => (
+const ParallaxContainer = (props) => (
   <Parallax
     className="custom-class"
-    // offsetYMax={200}
-    offsetXMin={20}
+    { ...props}
     slowerScrollRate
     tag="figure"
   >
-    {children}
+    {props.children}
   </Parallax>
 )
 

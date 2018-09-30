@@ -6,7 +6,10 @@ html {
 body {
   margin: 0;
   /* TODO: Delete this */
-  padding:1000px 0;
+  padding: 0 0 1000px 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #3B3F41;
 }
 article,
 aside,
