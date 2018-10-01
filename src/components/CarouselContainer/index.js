@@ -7,16 +7,16 @@ class CarouselContainer extends Component {
   render() {
     return <Carousel showThumbs={false}>
         <div>
-          <img src="https://picsum.photos/1200/600" />
-          <p className="legend">Legend 1</p>
+          <img src="https://source.unsplash.com/B0aCvAVSX8E/1200x600" />
+          {/* <p className="legend">Casa Basa</p> */}
         </div>
         <div>
-          <img src="https://picsum.photos/1200/600" />
-          <p className="legend">Legend 2</p>
+          <img src="https://source.unsplash.com/EQHjzzBcKlE/1200x600" />
+          {/* <p className="legend">Legend 2</p> */}
         </div>
         <div>
-          <img src="https://picsum.photos/1200/600" />
-          <p className="legend">Legend 3</p>
+          <img src="https://source.unsplash.com/jTCLppdwSEc/1200x600" />
+          {/* <p className="legend">Legend 3</p> */}
         </div>
       </Carousel>
   }

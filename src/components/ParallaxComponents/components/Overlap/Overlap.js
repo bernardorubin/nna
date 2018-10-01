@@ -25,7 +25,7 @@ const Overlap = () => (
                 offsetYMax={150}
                 offsetYMin={-50}
                 offsetXMax={40}
-                offsetXMin={-20}
+                offsetXMin={-60}
                 className={style.circleRings}
             >
                 <Svg

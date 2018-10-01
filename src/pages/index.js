@@ -27,15 +27,26 @@ const Row = styled.div`
 `
 
 const Col = styled.div`
-  width: 100px;
-  height: 20vh;
+  width: 2500px;
+  height: 10vh;
+  margin: 0;
 `
 const Col1 = styled(Col)`
   background: ${props => props.theme.colors.orange};
+  // border-radius: 0 0 20px 20px;
 `
 
 const Col2 = styled(Col)`
   background: ${props => props.theme.colors.green};
+  // border-radius: 20px 20px 0 0;
+`
+
+const ParallaxContainer1 = styled(ParallaxContainer)`
+  margin-bottom: 0;
+`
+const ParallaxContainer2 = styled(ParallaxContainer)`
+  margin-bottom: 0;
+  margin-left: -1000px;
 `
 
 const IndexPage = () => (
@@ -45,25 +56,22 @@ const IndexPage = () => (
         <Container>
           <ParallaxImage />
         </Container>
+        <Overlap />
         {/* <Intro /> */}
-        {/* <Overlap /> */}
         {/* <Link to="/page-2/">Go to page 2</Link> */}
         <CarouselContainer />
-        <CustomGallery />
 
-        <Row>ROW</Row>
         <Row>
-        <div>
-          <ParallaxContainer offsetXMin={11} offsetXMax={-10}>
-              <Col1 />
-          </ParallaxContainer>
-        </div>
+          <ParallaxContainer1 offsetXMin={11} offsetXMax={-100}>
+            <Col1 />
+          </ParallaxContainer1>
         </Row>
         <Row>
-          <ParallaxContainer offsetXMin={5} offsetXMax={100}>
+          <ParallaxContainer2 offsetXMin={5} offsetXMax={100}>
             <Col2 />
-          </ParallaxContainer>
+          </ParallaxContainer2>
         </Row>
+        <CustomGallery />
       </Layout>
     </ThemeProvider>
   </ParallaxProvider>
