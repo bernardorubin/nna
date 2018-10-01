@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/nna`,
+  pathPrefix: '/nna',
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
