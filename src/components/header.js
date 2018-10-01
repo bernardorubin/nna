@@ -13,52 +13,50 @@ const HeaderContainer = styled.div`
   background: white;
   position: relative;
   z-index: -2;
+  padding: 1rem 2rem;
 `
 const LogoContainer = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1rem 1.0875rem 0 1.0875rem;
-`
-const H1 = styled.h1`
-  margin: 0;
+  position: relative;
 `
 
 const Logo = styled.img`
   height: 80px;
 `
 
-const OverlayParallaxContainer = styled.div`
-  margin-top: -139px;
-  margin-left: -8.4984%;
-  margin-bottom: 0;
-`
-
 const OuterParallaxContainer = styled.div`
 `
 
 const ParallaxContainer1 = styled(ParallaxContainer)`
+  margin: 0;
 `
 
-const ParallaxContainer2 = styled(ParallaxContainer1)`
-  position: relative;
+const OverlayParallaxContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+`
+
+const ParallaxContainer2 = styled(ParallaxContainer)`
+  position: absolute;
   z-index: -1;
-  margin-bottom: 0;
+  margin: 0;
 `
 
 function Header({ siteTitle }) {
   return <HeaderContainer>
       <LogoContainer>
-        {/* <H1>
-          <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
-          </Link>
-        </H1> */}
+          {/* <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+          </Link> */}
         <OuterParallaxContainer>
           <ParallaxContainer1 offsetYMin={0} offsetXMin={0} offsetXMax={0}>
             <Logo src={logo1} alt="nn" />
           </ParallaxContainer1>
         </OuterParallaxContainer>
         <OverlayParallaxContainer>
-          <ParallaxContainer2 offsetXMin={11} offsetXMax={-12}>
+          <ParallaxContainer2 offsetXMin={11} offsetXMax={-240}>
             <Logo src={logo2} alt="nn" />
           </ParallaxContainer2>
         </OverlayParallaxContainer>

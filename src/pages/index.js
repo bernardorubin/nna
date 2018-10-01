@@ -7,29 +7,28 @@ import Overlap from '../components/ParallaxComponents/components/Overlap/Overlap
 import Intro from '../components/ParallaxComponents/components/Intro/Intro'
 
 import Layout from '../components/layout'
+import CustomGallery from '../components/CustomGallery'
 import ParallaxImage from '../components/ParallaxImage';
 import CarouselContainer from '../components/CarouselContainer';
+import Grid from '../components/Grid';
 import ParallaxBan from '../components/ParallaxBan';
 import theme from '../theme'
 import ParallaxContainer from '../components/ParallaxContainer';
 
 const Container = styled.div`
   height: 300px;
-  border: 1px solid red;
   overflow: hidden;
 `
 
 const Row = styled.div`
- display: flex;
- flex-direction: row;
- flex: 1;
+  display: flex;
+  flex-direction: row;
+  // flex: 1;
 `
 
 const Col = styled.div`
- display: flex;
- flex-direction: column;
- flex: 1;
- height: 80vh;
+  width: 100px;
+  height: 20vh;
 `
 const Col1 = styled(Col)`
   background: ${props => props.theme.colors.orange};
@@ -43,32 +42,27 @@ const IndexPage = () => (
   <ParallaxProvider>
     <ThemeProvider theme={theme}>
       <Layout>
-        {/* <Container>
+        <Container>
           <ParallaxImage />
-        </Container> */}
-        {/* <ParallaxBan /> */}
+        </Container>
         {/* <Intro /> */}
         {/* <Overlap /> */}
-        {/* <ParallaxContainer
-          offsetYMin={-500}
-          offsetYMax={0}
-          offsetXMin={20}
-          offsetXMax={200}
-        >
-          <div>Hello Parallax</div>
-        </ParallaxContainer> */}
         {/* <Link to="/page-2/">Go to page 2</Link> */}
-        <CarouselContainer></CarouselContainer>
+        <CarouselContainer />
+        <CustomGallery />
+
+        <Row>ROW</Row>
         <Row>
-          Hello
+        <div>
+          <ParallaxContainer offsetXMin={11} offsetXMax={-10}>
+              <Col1 />
+          </ParallaxContainer>
+        </div>
         </Row>
         <Row>
-          <Col1>Hello</Col1>
-          <Col>World</Col>
-        </Row>
-        <Row>
-          <Col>Hello</Col>
-          <Col2>Wolrd</Col2>
+          <ParallaxContainer offsetXMin={5} offsetXMax={100}>
+            <Col2 />
+          </ParallaxContainer>
         </Row>
       </Layout>
     </ThemeProvider>

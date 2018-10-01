@@ -9,7 +9,7 @@ const ParallaxImage = () => (
     slowerScrollRate
     tag="figure"
   >
-    <img src="https://picsum.photos/500/700" alt="image" />
+    <img src="https://source.unsplash.com/random/1200x240" alt="image" />
   </Parallax>
 )
 
