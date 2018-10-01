@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/nna`,
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
@@ -19,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ["absolute/path/a", "absolute/path/b"],
+        includePaths: ['absolute/path/a', 'absolute/path/b'],
       },
     },
     'gatsby-plugin-offline',
